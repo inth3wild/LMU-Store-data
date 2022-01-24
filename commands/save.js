@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 const mongoose = require('mongoose');
 const axios = require('axios').default;
-const encrypt = require('../modules/milk')
+const encrypt = require('../modules/milk');
 
 
 function save(params) {
@@ -10,7 +10,8 @@ function save(params) {
 
     // console.log(userNames);
 
-    let val = encrypt('data', 'key')
+
+    let val = encrypt('Developer2021', 'euqu3r!RtyuWe35t')
     console.log(val);
 
 }
