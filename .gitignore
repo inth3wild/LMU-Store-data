@@ -1,0 +1,6 @@
+main.py
+pipfile
+pipfile.lock
+node_modules/
+.dccache
+modules/emilk.js

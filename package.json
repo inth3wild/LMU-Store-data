@@ -1,0 +1,30 @@
+{
+  "name": "data-store",
+  "version": "1.0.0",
+  "description": "Store Data balance and updates with current balance",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inth3wild/LMU-Store-data.git"
+  },
+  "keywords": [
+    "commandline",
+    "cli"
+  ],
+  "author": "inth3wild",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inth3wild/LMU-Store-data/issues"
+  },
+  "homepage": "https://github.com/inth3wild/LMU-Store-data#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0",
+    "mongoose": "^6.1.7",
+    "prompt-sync": "^4.2.0"
+  }
+}
