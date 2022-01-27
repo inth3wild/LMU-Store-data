@@ -1,13 +1,17 @@
 const encrypt = require('./milk');
+const { encode, decode } = require('url-encode-decode');
+
 
 
 function encryptData(userName, password) {
     let encryptionKey = 'euqu3r!RtyuWe35t';
 
-    let encryptedUsername = encrypt(userName, encryptionKey);
-    let encryptedPassword = encrypt(password, encryptionKey);
+    // urlencode the encrypted username and password
+    let encryptedUsername = encode( encrypt(userName, encryptionKey) );
+    let encryptedPassword = encode( encrypt(password, encryptionKey) );
 
-    return [encryptedUsername, encryptedPassword, 'ndRqubVtsDQXXU86UhbIqTbybjA=', 'ndRqubVtsDQXXU86UhbIqTbybjA='];
+    // return formatted string that resembles the "tail" form field sent in netsurf's request
+    return `["${encryptedUsername}","${encryptedPassword}","ndRqubVtsDQXXU86UhbIqTbybjA%3D","ndRqubVtsDQXXU86UhbIqTbybjA%3D"]`;
 }
 
 module.exports = encryptData;

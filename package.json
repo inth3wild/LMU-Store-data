@@ -24,7 +24,9 @@
     "axios": "^0.25.0",
     "chalk": "^4.1.2",
     "commander": "^8.3.0",
+    "form-data": "^4.0.0",
     "mongoose": "^6.1.7",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "url-encode-decode": "^1.0.0"
   }
 }
