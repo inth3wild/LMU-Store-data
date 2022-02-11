@@ -1,8 +1,23 @@
-const displayTable = require('../modules/displayTable');
+const { displayTable, displayTableWithData, displayTableWithoutData, displayTableInvalid } = require('../modules/displayTable');
+const options = require('../index');
 
-function display(params) {
-    // Display result cli table
-    displayTable();
+function display(options) {
+    // console.log(options);
+    // Display results in cli table
+
+    if (options.hasData) {
+        displayTableWithData();
+    } 
+    else if (options.empty) {
+        displayTableWithoutData();
+    }
+    else if (options.invalid) {
+        displayTableInvalid();
+    }
+    else{
+        displayTable();
+    }
+
 }
 
 

@@ -2,7 +2,7 @@ const axios = require('axios').default;
 const useRegex = require('../modules/useRegex');
 
 
-function sendRequest(encryptedData, username) {
+function sendRequest(encryptedData, username, paramObj, callback) {
     axios({
         url: 'https://netsurf.lmu.edu.ng/ajax/bals.php',
         method: 'POST',
@@ -16,11 +16,18 @@ function sendRequest(encryptedData, username) {
 
         // Use reqular expressions to get username and data balance from response
         useRegex(response.data, username);
+
+        if(paramObj.index == paramObj.length) {
+            // Call the callback function which is displayTable
+            callback()
+        }   
+
+        
     })
     .catch((error) => {
         if (error.code == 'ETIMEDOUT') {
             console.log('Bad network, Retrying...');
-            sendRequest(encryptedData, username)
+            sendRequest(encryptedData, username, paramObj, callback)
         }
     })
 

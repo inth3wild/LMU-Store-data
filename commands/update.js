@@ -10,19 +10,20 @@ const path = require('path')
 
 
 
-function save(options) {
+
+function update(options) {
     let allLinesArr = [];
 
     if (options.file) {
         credentialsFile = path.resolve(options.file);
-
+        
         // Create stream of input file
         const rl = readline.createInterface({
             input: fs.createReadStream(credentialsFile),
             output: process.stdout,
             terminal:false
         })
-
+                
         //   Process the stream
         rl.on('line', (line) => {
             let lineArr = line.split(' ');
@@ -34,7 +35,8 @@ function save(options) {
             // call sendRequest that checks data balance
             sendRequest(encryptedData, lineArr[0], {index: 1, length: 0});
         })
-
+        
+        
         rl.on('pause', () => {
             // console.log('\nDone! Reading file\n');
             allLinesArr.forEach((arr, index) =>{
@@ -45,7 +47,8 @@ function save(options) {
                 sendRequest(encryptedData, arr[0], {index: index + 1, length: allLinesArr.length}, displayTable);
             });
         })
-    
+
+
     } 
     else {
         // let userNames = prompt('Enter username(s) seperated by comma(,): ').split(',');
@@ -59,17 +62,17 @@ function save(options) {
                 // encrypt the username and password with emilk's algorithm
                 let encryptedData = encryptData(username, password);
 
-            // call sendRequest that checks data balance
-            sendRequest(encryptedData, username, {index: index + 1, length: userNames.length}, displayTable);
-            });        
+                // call sendRequest that checks data balance
+                sendRequest(encryptedData, username, {index: index + 1, length: userNames.length}, displayTable);
+            });
         } 
         else {
             console.log(
                 chalk.yellow.bold('\nPlease make sure the Number of elements in the username and password fields are the same \n')
             );
-            save();
-        }
+            update();
+        } 
     }
 }
 
-module.exports = save;
+module.exports = update;
