@@ -51,9 +51,8 @@ function update(options) {
 
     } 
     else {
-        // let userNames = prompt('Enter username(s) seperated by comma(,): ').split(',');
-        // let passwords = prompt('Enter password(s) seperated by comma(,): ').split(',');
-
+        let userNames = prompt('Enter username(s) seperated by comma(,): ').split(',');
+        let passwords = prompt('Enter password(s) seperated by comma(,): ').split(',');
 
         if (userNames.length == passwords.length) {
             userNames.forEach((username, index) => {

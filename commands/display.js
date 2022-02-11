@@ -2,7 +2,6 @@ const { displayTable, displayTableWithData, displayTableWithoutData, displayTabl
 const options = require('../index');
 
 function display(options) {
-    // console.log(options);
     // Display results in cli table
 
     if (options.hasData) {
