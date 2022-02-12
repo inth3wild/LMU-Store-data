@@ -1,6 +1,7 @@
 # LMU-Store-data.
 Check the data balance of multiple accounts at the same time.
 <!--  Funny names Go here-->
+![](https://github.com/inth3wild/LMU-Store-data/blob/main/media/ezgif.com-gif-maker.gif)
 
 ## Installing:
 ### Requirements:
