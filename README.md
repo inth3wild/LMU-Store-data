@@ -5,10 +5,10 @@ Check the data balance of multiple accounts at the same time.
 ## Installing:
 ### Requirements:
 * You need to have Node.js installed. [Install node.js](https://nodejs.org/en/download/)
-* Run the command `npm i -g data-store`
+* Run the command `npm i -g balance-store`
 
 ## Usage:
-`data-store [command] [options]`
+`balance-store [command] [options]`
 ## Commands:
 ### 1. **save** : Save usernames in the database  
 **options** :  
@@ -16,11 +16,11 @@ Check the data balance of multiple accounts at the same time.
 
 **Example Usage** :  
 ```
-  $ data-store save
+  $ balance-store save
 ```
 OR
 ```
-  $ data-store save -f /Path/To/File
+  $ balance-store save -f /Path/To/File
 ```
 > **NB**: The file MUST contain the usernames and passwords in this format
 ```
@@ -34,11 +34,11 @@ OR
 
 **Example Usage** :  
 ```
-  $ data-store update
+  $ balance-store update
 ```
 OR
 ```
-  $ data-store update -f /Path/To/File
+  $ balance-store update -f /Path/To/File
 ```
 > **NB**: The file MUST contain the usernames and passwords in this format
 ```
@@ -55,19 +55,19 @@ OR
 
 **Example Usage** :  
 ```
-  $ data-store display
+  $ balance-store display
 ```
 OR
 ```
-  $ data-store display --has-data
+  $ balance-store display --has-data
 ```
 OR
 ```
-  $ data-store display --empty
+  $ balance-store display --empty
 ```
 
 ## Help
 For more info run:  
-`data-store --help`  
+`balance-store --help`  
 OR  
-`data-store [command] --help`
+`balance-store [command] --help`
