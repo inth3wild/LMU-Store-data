@@ -1,11 +1,11 @@
 {
   "name": "balance-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Store Data balance and updates with current balance",
   "main": "index.js",
   "bin": {
     "balance-store": "./index.js"
-  }, 
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
