@@ -3,7 +3,7 @@ const Table = require('cli-table');
 const chalk = require('chalk')
 
 
-async function displayTable(params) {
+function displayTable(params) {
     let dbData = readfromDB();
     let index = 0;
 

@@ -7,15 +7,15 @@ const update = require('./commands/update');
 
 
 program
-    .name('data-store')
+    .name('balance-store')
     .usage('[command] [options]')
     .addHelpText('after', `
 Example Call:
-    $ data-store save --> save usernames and data balances with input via the command line
+    $ balance-store save --> save usernames and data balances with input via the command line
 
-    $ data-store save -f '/The/Path/to/File/' --> save usernames and data balances with input from a file
+    $ balance-store save -f '/The/Path/to/File/' --> save usernames and data balances with input from a file
 
-    $ data-store display --has-data --> Display only usernames that HAVE data
+    $ balance-store display --has-data --> Display only usernames that HAVE data
 
     `)
     .command('save')
