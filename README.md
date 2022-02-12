@@ -1,7 +1,5 @@
 # LMU-Store-data.
 Check the data balance of multiple accounts at the same time.
-<!--  Funny names Go here-->
-![](https://github.com/inth3wild/LMU-Store-data/blob/main/media/ezgif.com-gif-maker.gif)
 
 ## Installing:
 ### Requirements:
@@ -28,6 +26,8 @@ OR
   john.doe password1
   luxxxxx password2
 ```
+![save-usage](https://github.com/inth3wild/LMU-Store-data/blob/main/media/save-edited.png)
+---
 
 ### 2. **update** : Update data balances in the database  
 **options** :  
@@ -46,6 +46,8 @@ OR
   john.doe password1
   luxxxxx password2
 ```
+![update-usage](https://github.com/inth3wild/LMU-Store-data/blob/main/media/update-edited.png)
+---
   
   
 ### 3. **display** : Display the usernames and data balances  
@@ -66,9 +68,9 @@ OR
 ```
   $ balance-store display --empty
 ```
+![display-usage](https://github.com/inth3wild/LMU-Store-data/blob/main/media/display-edited.png)
+---
 
 ## Help
 For more info run:  
-`balance-store --help`  
-OR  
-`balance-store [command] --help`
+`balance-store --help`  OR   `balance-store [command] --help`
