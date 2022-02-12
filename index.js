@@ -10,13 +10,14 @@ program
     .name('balance-store')
     .usage('[command] [options]')
     .addHelpText('after', `
-Example Call:
-    $ balance-store save --> save usernames and data balances with input via the command line
+Examples:
+    $ balance-store save                            Save usernames and data balances with input via the command line
+    $ balance-store save -f '/The/Path/to/File/'    Save usernames and data balances with input from a file
+    $ balance-store display --has-data              Display only usernames that HAVE data
 
-    $ balance-store save -f '/The/Path/to/File/' --> save usernames and data balances with input from a file
+    See: https://github.com/inth3wild/LMU-Store-data for detailed use.
 
-    $ balance-store display --has-data --> Display only usernames that HAVE data
-
+    made with 🧡 by inth3wild
     `)
     .command('save')
     .description('Save usernames and data balances in the database')
