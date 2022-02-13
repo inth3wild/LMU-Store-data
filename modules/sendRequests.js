@@ -15,11 +15,11 @@ function sendRequest(encryptedData, username, paramObj, callback) {
     .then((response) => {
 
         // Use reqular expressions to get username and data balance from response
-        useRegex(response.data, username);
+        useRegex(response.data, username, encryptedData);
 
         if(paramObj.index == paramObj.length) {
             // Call the callback function which is displayTable
-            callback()
+            callback();
         }   
 
         

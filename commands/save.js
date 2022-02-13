@@ -48,8 +48,8 @@ function save(options) {
     
     } 
     else {
-        let userNames = prompt('Enter username(s) seperated by comma(,): ').split(',');
-        let passwords = prompt('Enter password(s) seperated by comma(,): ').split(',');
+        let userNames = prompt('Enter a Username or list of Usernames seperated by comma(,): ').split(',');
+        let passwords = prompt('Enter a Password or list of Passwords seperated by comma(,): ').split(',');
 
         if (userNames.length == passwords.length) {
             userNames.forEach((username, index) => {

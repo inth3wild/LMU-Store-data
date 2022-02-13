@@ -7,6 +7,7 @@ const options = require('../index');
 const fs = require('fs');
 const readline = require('readline');
 const path = require('path')
+const {readfromDB} = require('../database/db');
 
 
 
@@ -47,12 +48,22 @@ function update(options) {
                 sendRequest(encryptedData, arr[0], {index: index + 1, length: allLinesArr.length}, displayTable);
             });
         })
-
-
+        
+        
     } 
+    else if(options.auto){
+        let dbData = readfromDB();
+        let index = 0;
+        let length = Object.entries(dbData).length;
+        for (let i in dbData) {
+            // console.log(i);
+            sendRequest(dbData[i].encryptedData, i, {index: index + 1, length: length}, displayTable);
+            index++;
+        }    
+    }
     else {
-        let userNames = prompt('Enter username(s) seperated by comma(,): ').split(',');
-        let passwords = prompt('Enter password(s) seperated by comma(,): ').split(',');
+        let userNames = prompt('Enter a Username or list of Usernames seperated by comma(,): ').split(',');
+        let passwords = prompt('Enter a Password or list of Passwords seperated by comma(,): ').split(',');
 
         if (userNames.length == passwords.length) {
             userNames.forEach((username, index) => {

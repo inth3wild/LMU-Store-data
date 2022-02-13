@@ -3,6 +3,7 @@ const { program } = require('commander')
 const save = require('./commands/save')
 const display = require('./commands/display');
 const update = require('./commands/update');
+const remove = require('./commands/remove');
 
 
 
@@ -29,6 +30,7 @@ program
     .command('update')
     .description('Update data balances in the database')
     .option('-f, --file <file path>', 'Path to file that has the usernames and passwords eg: \'C:\Users\me\Documents\credentials.txt\' ')
+    .option('--auto', 'Automatically update the data balances in the database WITHOUT asking for passwords')
     .action(update)
 
     
@@ -39,6 +41,12 @@ program
     .option('--empty', 'Display ONLY usernames that DON\'T have data')
     .option('--invalid', 'Display ONLY usernames that are INVALID')
     .action(display)
+
+
+program
+    .command('remove')
+    .description('Remove a username or set of usernames from the database')
+    .action(remove)
     
 
 program.parse(process.argv);
