@@ -4,12 +4,16 @@ const save = require('./commands/save')
 const display = require('./commands/display');
 const update = require('./commands/update');
 const remove = require('./commands/remove');
+const { version } = require('./package.json');
 
 
 
 program
     .name('balance-store')
     .usage('[command] [options]')
+    .addHelpText('beforeAll', `
+Version: ${version}
+    `)
     .addHelpText('after', `
 Examples:
     $ balance-store save                            Save usernames and data balances with input via the command line
