@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 const useRegex = require('../modules/useRegex');
-
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 function sendRequest(encryptedData, username, paramObj, callback) {
     axios({
