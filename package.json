@@ -1,6 +1,6 @@
 {
   "name": "balance-store",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Store Data balance and updates with current balance",
   "main": "index.js",
   "bin": {
