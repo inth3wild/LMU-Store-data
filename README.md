@@ -1,7 +1,6 @@
 # LMU-Store-data.
 Command-line interface program that helps students quickly check, manage and keep track of their internet quota.
 <p align="left">
-	<img src="https://img.shields.io/github/license/inth3wild/LMU-Store-data?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/inth3wild/LMU-Store-data?style=flat-square&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 </p>
 
