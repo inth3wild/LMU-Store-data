@@ -1,5 +1,15 @@
 # LMU-Store-data.
-Check the data balance of multiple accounts at the same time.
+Command-line interface program that helps students quickly check, manage and keep track of their internet quota.
+<p align="left">
+	<img src="https://img.shields.io/github/license/inth3wild/LMU-Store-data?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/inth3wild/LMU-Store-data?style=flat-square&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+</p>
+
+<p align="left">Built with the following tools and technologies:</p>
+<p align="left">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat-square&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=flat-square&logo=Axios&logoColor=white" alt="Axios">
+</p>
 
 ## Installing:
 ### Requirements:
@@ -87,4 +97,33 @@ OR
 
 ## Help
 For more info run:  
-`balance-store --help`  OR   `balance-store [command] --help`
+`balance-store --help`  OR   `balance-store [command] --help`  
+
+## Project Structure
+
+```sh
+└── LMU-Store-data/
+    ├── README.md
+    ├── commands
+    │   ├── display.js
+    │   ├── remove.js
+    │   ├── save.js
+    │   └── update.js
+    ├── database
+    │   └── db.js
+    ├── index.js
+    ├── media
+    │   ├── display-edited.png
+    │   ├── remove-edited.png
+    │   ├── resources.txt
+    │   ├── save-edited.png
+    │   └── update-edited.png
+    ├── modules
+    │   ├── displayTable.js
+    │   ├── encryptData.js
+    │   ├── milk.js
+    │   ├── sendRequests.js
+    │   └── useRegex.js
+    ├── package-lock.json
+    └── package.json
+```
