@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/inth3wild/LMU-Store-data#readme",
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "^1.6.0",
     "chalk": "^4.1.2",
     "cli-table": "^0.3.11",
     "commander": "^8.3.0",
